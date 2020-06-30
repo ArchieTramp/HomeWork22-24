@@ -106,7 +106,8 @@ public class ConsoleDaoJDBC implements ConsoleDao {
     }
 
     @Override
-    public void upgradeConsole(Integer id, NewGameConsole newGameConsole) {
+    public NewGameConsole upgradeConsole(Integer id) {
+        NewGameConsole newGameConsole = null;
         try (Connection connection = connectionManager.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_CONSOLES)) {
             preparedStatement.setInt(6, id);
@@ -119,7 +120,7 @@ public class ConsoleDaoJDBC implements ConsoleDao {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
+        return null;
     }
 
 
