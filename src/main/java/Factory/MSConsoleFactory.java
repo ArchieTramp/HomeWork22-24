@@ -1,4 +1,6 @@
-public class MSConsoleFactory implements ConsoleFactory{
+package Factory;
+
+public class MSConsoleFactory implements ConsoleFactory {
     @Override
     public GameConsole createConsole() {
         return new MSConsole();

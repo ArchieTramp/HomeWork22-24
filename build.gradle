@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group 'org.example'
@@ -13,4 +14,12 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.14'
+
+    compile group: 'javax', name: 'javaee-api', version: '8.0'
+
+    compile group: 'jstl', name: 'jstl', version: '1.2'
+
+    compile group: 'org.jboss.weld.servlet', name: 'weld-servlet', version: '2.4.8.Final'
+
+
 }

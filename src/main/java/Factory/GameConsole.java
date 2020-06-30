@@ -1,3 +1,5 @@
+package Factory;
+
 import java.sql.SQLException;
 
 public interface GameConsole {

@@ -1,9 +1,11 @@
+package Factory;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MSConsole implements GameConsole {
+public class NintendoConsole implements GameConsole {
     @Override
     public void addToDB() throws SQLException {
         try (Connection connection = DriverManager.getConnection(
@@ -13,8 +15,9 @@ public class MSConsole implements GameConsole {
             Statement statement = connection.createStatement();
             statement.execute("INSERT INTO consoles (name, model, price, includeGames, company)\n" +
                     "VALUES \n" +
-                    "('XBOX', 'SeriesX', 50000, 3, 'MS')");
+                    "('Switch', 'PRO', 20000, 5, 'Nintendo')");
         }
-        System.out.println("Inserted new XBOX");
+        System.out.println("Inserted new Switch");
     }
 }
+
